@@ -30,7 +30,7 @@ bot.on('message', message => {
 
     if (message.content.startsWith(prefix + 'setplayingstatus')) {
 
-               if(message.author !== bot.user) {
+               if(message.author !== bot.user) return;
 message.delete()
             
 
