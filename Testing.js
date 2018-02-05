@@ -106,6 +106,7 @@ bot.on('message', message => {
     var embed = new Discord.RichEmbed();
     if(message.author !== bot.user) return
     if (message.content.toLowerCase().startsWith(prefix + 'permissions') && user) { 
+    message.delete()
     user.createDM()                                      
     embed.setColor("BLUE")
     embed.setDescription("test")
