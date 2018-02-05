@@ -117,9 +117,10 @@ bot.on('message', message => {
     var embed = new Discord.RichEmbed();
     if(message.author !== bot.user) return
     if (message.content.toLowerCase().startsWith(prefix + 'permissions') && user) { 
+    user.createDM()                                      
     embed.setColor("BLUE")
     embed.setDescription("test")
-    message.channel.send({embed});
+    user.send({embed});
     } 
 });
 
