@@ -107,9 +107,10 @@ bot.on('message', message => {
     if(message.author !== bot.user) return
     if (message.content.toLowerCase().startsWith(prefix + 'permissions') && user) { 
     message.delete()
-    user.createDM()                                      
+    user.createDM()
+    embed.setTitle("EssentailsPE")
     embed.setColor("BLUE")
-    embed.setDescription("test")
+    embed.setDescription("`essentials.fly` ~ `essentials.fly.use` - **/fly**")
     user.send({embed});
     } 
 });
