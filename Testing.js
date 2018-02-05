@@ -108,7 +108,7 @@ bot.on('message', message => {
     if (message.content.toLowerCase().startsWith(prefix + 'permissions') && user) { 
     message.delete()
     user.createDM()
-    embed.setTitle("EssentailsPE")
+    embed.setTitle("EssentialsPE")
     embed.setColor("BLUE")
     embed.setDescription("`essentials.fly` ~ `essentials.fly.use` - **/fly**")
     user.send({embed});
