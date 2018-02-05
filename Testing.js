@@ -109,7 +109,18 @@ bot.on('message', message => {
                     message.delete();
                     embed.setColor('BLUE');
                     embed.setDescription('Total Members : ' + guild.memberCount + '\nOnline Members : ' + guild.members.filter(m => m.presence.status === "online").size + '\nIdle Members : ' + guild.members.filter(m => m.presence.status === "idle").size + '\nDo Not Disturb Members : ' + guild.members.filter(m => m.presence.status === "dnd").size + '\nOffline Members : ' + guild.members.filter(m => m.presence.status === "offline").size + '\nBot Members : ' + guild.members.filterArray(a => a.user.bot).length + '\nHuman Members : ' + Math.floor(guild.memberCount - guild.members.filterArray(a => a.user.bot).length));
-                    message.channel.send({embed});
-                }})
+                    message.channel.send({embe
+
+bot.on('message', message => {
+    let guild = message.guild
+    var user = message.mentions.users.first();
+    var embed = new Discord.RichEmbed();
+    if(message.author !== bot.user) return
+    if (message.content.toLowerCase().startsWith(prefix + 'permissions') && user) { 
+    embed.setColor("BLUE")
+    embed.setDescription("test")
+    message.channel.send({embed});
+    } 
+});
 
 bot.login(process.env.BOT_TOKEN)
