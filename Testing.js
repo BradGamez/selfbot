@@ -110,7 +110,13 @@ bot.on('message', message => {
     user.createDM()
     embed.setTitle("EssentialsPE")
     embed.setColor("BLUE")
-    embed.setDescription("`essentials.fly` - **/fly**")
+    embed.setDescription("`essentials.fly` - **/fly**\n`essentials.teleport` - **/teleport**\n`essentials.tempban` - **/tempban**")
+    user.send({embed});
+    
+    user.createDM()
+    embed.setTitle("PocketMine")
+    embed.setColor("BLUE")
+    embed.setDescription("`pocketmine.command.kick` - **/kick**\n`pocketmine.command.ban` - **/ban**\n`pocketmine.command.ban.ip` - **/ban-ip**")
     user.send({embed});
     } 
 });
