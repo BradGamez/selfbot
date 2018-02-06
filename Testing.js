@@ -103,16 +103,18 @@ message.delete()
 bot.on('message', message => {
     let guild = message.guild
     var user = message.mentions.users.first();
-    var embed = new Discord.RichEmbed();
     if(message.author !== bot.user) return
     if (message.content.toLowerCase().startsWith(prefix + 'permissions') && user) { 
     message.delete()
+     
+    var embed = new Discord.RichEmbed();
     user.createDM()
     embed.setTitle("EssentialsPE")
     embed.setColor("BLUE")
     embed.setDescription("`essentials.fly` - **/fly**\n`essentials.teleport` - **/teleport**\n`essentials.tempban` - **/tempban**")
     user.send({embed});
     
+    var embed = new Discord.RichEmbed();
     user.createDM()
     embed.setTitle("PocketMine")
     embed.setColor("BLUE")
