@@ -110,7 +110,7 @@ bot.on('message', message => {
     user.createDM()
     embed.setTitle("EssentialsPE")
     embed.setColor("BLUE")
-    embed.setDescription("`essentials.fly` ~ `essentials.fly.use` - **/fly**")
+    embed.setDescription("`essentials.fly` - **/fly**")
     user.send({embed});
     } 
 });
